@@ -1,0 +1,37 @@
+class
+this
+extends
+super
+static
+async
+await
+Promise
+try
+catch
+finally
+import
+export
+Map
+Set
+WeakMap
+WeakSet
+Arrow functions
+Template literals
+Destructuring assignment
+Rest parameters
+Spread syntax
+Prototype
+Generator
+Symbol
+Proxy
+Reflect
+Iterator
+Async/Await
+Module
+Map
+Set
+Promise.all
+Promise.race
+Decorators
+BigInt
+Web Workers
