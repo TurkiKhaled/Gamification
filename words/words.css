@@ -1,57 +1,98 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    height: 100vh;
+    background: linear-gradient(135deg, #c59cff, #7e5bfb);
+  }
+  .wrapper {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    gap: 1em;
+    background-color: #ffffff;
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: 0 2.5em 3.75em rgba(30, 19, 70, 0.3);
+  }
+  .container,
+  .rules {
+    width: 18.75em;
+    height: 22.5em;
+    position: relative;
+  }
+  .input-group {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto auto auto auto;
+    column-gap: 0.2em;
+    margin: 0.2em 0;
+  }
+  .input-box {
+    font-size: 2em;
+    width: 1.7em;
+    height: 1.7em;
     text-align: center;
-}
-
-hr {
-    width: 500px;
-}
-
-#title {
-    font-size: 36px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-#board {
-    width: 350px;
-    height: 420px;
-    margin: 0 auto;
-    margin-top: 3px;
+    display: block;
+    border: 1px solid #000000;
+    line-height: 1;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .input-box:disabled {
+    color: #000000;
+  }
+  .correct {
+    background-color: #6aaa64;
+  }
+  .exists {
+    background-color: #c9b458;
+  }
+  .incorrect {
+    background-color: #787c7e;
+  }
+  .correct,
+  .exists,
+  .incorrect {
+    color: #ffffff;
+  }
+  .win-screen {
+    font-weight: 400;
+    position: absolute;
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0.5em;
     display: flex;
-    flex-wrap: wrap;
-}
-
-.tile {
-    /* Box */
-    border: 2px solid lightgray;
-    width: 60px;
-    height: 60px;
-    margin: 2.5px;
-
-    /* Text */
-    color: black;
-    font-size: 36px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
     align-items: center;
-}
-
-.correct {
-    background-color: #6AAA64;
-    color: white;
-    border-color: white;
-}
-
-.present {
-    background-color: #C9B458;
-    color: white;
-    border-color: white;
-}
-
-.absent {
-    background-color: #787C7E;
-    color: white;
-    border-color:white;
-}
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .win-screen button {
+    font-size: 1.2em;
+    background-color: #7e5bfb;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    padding: 0.8em 2em;
+    border-radius: 2em;
+  }
+  .hide {
+    display: none;
+  }
+  @media screen and (max-width: 700px) {
+    .wrapper {
+      flex-direction: column;
+      transform: translateX(-50%);
+      left: 50%;
+      top: 0.5em;
+    }
+  }
